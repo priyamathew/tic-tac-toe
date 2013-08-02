@@ -18,6 +18,17 @@
   <title></title>
 </head>
 <body>
-  <%= yield %>
+  <div class="container">
+  <nav>
+    <a href="/">Home</a>
+    <% if current_user %>
+      <a href="/game_lobby">Game Lobby</a>
+      <a href="/logout">Logout</a>
+    <% end %>
+  </nav>
+
+    <%= yield %>
+    
+  </div>
 </body>
 </html>
